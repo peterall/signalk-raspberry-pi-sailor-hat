@@ -5,7 +5,7 @@ module.exports = function (app) {
 
   plugin.id = 'raspberry-pi-sailor-hat';
   plugin.name = 'Raspberry Pi Sailor Hat';
-  plugin.description = 'Plugin that does stuff';
+  plugin.description = 'Provides data from the Sailor Hat for the Raspberry Pi.';
   let interval;
 
   function getSailorHatValues() {
@@ -32,6 +32,10 @@ module.exports = function (app) {
                     {
                       path: "electrical.sailorHat.current",
                       value: I_in
+                    },
+                    {
+                      path: "electrical.sailorHat.power",
+                      value: I_in * V_in
                     },
                     {
                       path: "environment.sailorHat.temperature",

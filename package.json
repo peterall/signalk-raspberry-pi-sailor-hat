@@ -1,7 +1,7 @@
 {
   "name": "signalk-raspberry-pi-sailor-hat",
   "version": "1.0.0",
-  "description": "SignalK plugin for hatlabs.fi Sailor Hat",
+  "description": "SignalK plugin for Sailor Hat",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,6 @@
     "signalk-node-server-plugin",
     "signalk-category-hardware"
   ],
-  "author": "",
+  "author": "Peter Allwin",
   "license": "ISC"
 }
