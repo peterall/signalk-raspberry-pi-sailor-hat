@@ -55,6 +55,42 @@ module.exports = function (app) {
   };
 
   plugin.start = function (options, restartPlugin) {
+    app.handleMessage(plugin.id, {
+      updates: [{
+          meta: [
+            {
+              path: "electrical.sailorHat.voltage",
+              value: {
+                  units: "V"
+              }
+            },
+            {
+              path: "electrical.sailorHat.supercapVoltage",
+              value: {
+                  units: "V"
+              }
+            },
+            {
+              path: "electrical.sailorHat.current",
+              value: {
+                  units: "A"
+              }
+            },
+            {
+              path: "electrical.sailorHat.power",
+              value: {
+                  units: "W"
+              }
+            },
+            {
+              path: "environment.sailorHat.temperature",
+              value: {
+                  units: "K"
+              }
+            },
+          ]
+        }]
+    });
     interval = setInterval(function () {
       getSailorHatValues();
     }, 10000);
